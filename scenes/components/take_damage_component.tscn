@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c037i74n2dg8k"]
+
+[ext_resource type="Script" path="res://scripts/components/take_damage_component.gd" id="1_yxxv3"]
+
+[node name="TakeDamageComponent" type="Area2D"]
+collision_layer = 512
+collision_mask = 1024
+script = ExtResource("1_yxxv3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
