@@ -12,9 +12,13 @@ var ready_to_throw : bool = false
 
 func channel():
 	pass
+
+func cast():
+	pass
 	
 func cancel():
 	pass
 
 func throw(delta : float): 
 	pass
+
