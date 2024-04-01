@@ -49,6 +49,7 @@ _data = {
 
 [node name="BasicWaterShield" type="Node2D"]
 script = ExtResource("1_4kenc")
+SPELL_TYPE = "SELF_INFLICTING"
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_dwxjn")]
 
