@@ -1,0 +1,126 @@
+[gd_scene load_steps=2 format=3 uid="uid://00j2gvfp6xcr"]
+
+[ext_resource type="Theme" uid="uid://cjpy2xua6viwc" path="res://assets/UI/themes/default_theme.tres" id="1_xumfu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xumfu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0117647, 0, 0.188235, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Teste Titulo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="StartGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../../ButtonsVBox2/Audio")
+focus_neighbor_top = NodePath("../QuitGame")
+focus_neighbor_right = NodePath("../../ButtonsVBox2/Audio")
+focus_neighbor_bottom = NodePath("../QuitGame")
+focus_next = NodePath("../QuitGame")
+focus_previous = NodePath("../QuitGame")
+text = "Iniciar Jogo"
+
+[node name="QuitGame" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/ButtonsVBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../../ButtonsVBox2/Controls")
+focus_neighbor_top = NodePath("../StartGame")
+focus_neighbor_right = NodePath("../../ButtonsVBox2/Controls")
+focus_neighbor_bottom = NodePath("../StartGame")
+focus_next = NodePath("../StartGame")
+focus_previous = NodePath("../StartGame")
+text = "Sair"
+
+[node name="ButtonsVBox2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Settings" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/ButtonsVBox2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Configurações"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Audio" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/ButtonsVBox2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../../ButtonsVBox/StartGame")
+focus_neighbor_top = NodePath("../Controls")
+focus_neighbor_right = NodePath("../../ButtonsVBox/StartGame")
+focus_neighbor_bottom = NodePath("../Video")
+focus_next = NodePath("../Video")
+focus_previous = NodePath("../Controls")
+text = "Audio"
+
+[node name="Video" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/ButtonsVBox2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../../ButtonsVBox/StartGame")
+focus_neighbor_top = NodePath("../Audio")
+focus_neighbor_right = NodePath("../../ButtonsVBox/StartGame")
+focus_neighbor_bottom = NodePath("../Controls")
+focus_next = NodePath("../Controls")
+focus_previous = NodePath("../Audio")
+text = "Video"
+
+[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/ButtonsVBox2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath("../../ButtonsVBox/QuitGame")
+focus_neighbor_top = NodePath("../Video")
+focus_neighbor_right = NodePath("../../ButtonsVBox/QuitGame")
+focus_neighbor_bottom = NodePath("../Audio")
+focus_next = NodePath("../Audio")
+focus_previous = NodePath("../Video")
+text = "Controlos"
