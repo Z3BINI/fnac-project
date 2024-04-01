@@ -4,5 +4,7 @@
 
 [node name="TestWorld" type="Node2D"]
 
+[node name="Projectiles" type="Node" parent="." groups=["projectiles"]]
+
 [node name="Player" parent="." instance=ExtResource("1_5alqc")]
 position = Vector2(119, 73)
