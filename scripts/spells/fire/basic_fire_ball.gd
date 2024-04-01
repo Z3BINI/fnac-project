@@ -11,6 +11,7 @@ func _ready():
 	
 func _physics_process(delta):
 	if ready_to_throw and set_throw:
+		do_damage_component.toggle_detection_disabled(false)
 		throw(delta)
 
 func channel():
