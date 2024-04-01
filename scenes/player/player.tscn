@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://chr6qhnp1dx20"]
+[gd_scene load_steps=30 format=3 uid="uid://chr6qhnp1dx20"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_5ftyk"]
 [ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_7iw85"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c72go2r46fgfw" path="res://scenes/components/stamina_component.tscn" id="2_gsf2b"]
 [ext_resource type="PackedScene" uid="uid://c037i74n2dg8k" path="res://scenes/components/take_damage_component.tscn" id="2_mc55h"]
 [ext_resource type="Texture2D" uid="uid://wraxjaxce3c7" path="res://assets/player/Small-8-Direction-Characters_by_AxulArt.png" id="7_bibi5"]
+[ext_resource type="PackedScene" uid="uid://c3wji5qdjpcm5" path="res://scenes/UI/spell_pointer.tscn" id="7_qxcbc"]
 [ext_resource type="PackedScene" uid="uid://dlk2ukj4w1ri6" path="res://scenes/components/animation_state_component.tscn" id="8_vdvbs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3bel"]
@@ -367,6 +368,8 @@ shape = SubResource("RectangleShape2D_f3bel")
 
 [node name="CastPos" type="Marker2D" parent="."]
 position = Vector2(-16.7043, 2.11588)
+
+[node name="SpellPointer" parent="CastPos" instance=ExtResource("7_qxcbc")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.575733, -1.90368)

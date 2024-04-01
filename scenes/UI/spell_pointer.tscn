@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3wji5qdjpcm5"]
+
+[ext_resource type="Script" path="res://scenes/UI/spell_pointer.gd" id="1_m7s33"]
+[ext_resource type="Texture2D" uid="uid://b2uqoirkilxf8" path="res://assets/UI/HUD/spell_pointer.png" id="1_r04ja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjvlq"]
+atlas = ExtResource("1_r04ja")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrxk0"]
+atlas = ExtResource("1_r04ja")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o41o"]
+atlas = ExtResource("1_r04ja")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p13ps"]
+atlas = ExtResource("1_r04ja")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcs86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjvlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrxk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o41o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p13ps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="SpellPointer" type="Node2D"]
+visible = false
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_m7s33")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, 0)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_rcs86")
+autoplay = "default"

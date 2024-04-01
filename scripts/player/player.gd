@@ -26,9 +26,11 @@ func _physics_process(_delta) -> void:
 	if (Input.is_action_just_pressed("ability_1")):
 		ability_one = preload("res://scenes/spells/fire/basic_fire_ball.tscn").instantiate()
 		cast_pos.add_child(ability_one)
+		toggle_cast_pointer()
 	
 	if Input.is_action_just_released("ability_1") and ability_one.set_throw == false:
 		ability_one.cancel()
+		toggle_cast_pointer()
 	
 	if ability_one:
 		if (Input.is_action_just_pressed("throw_cast") and
@@ -42,6 +44,9 @@ func _physics_process(_delta) -> void:
 			await ability_one.pre_throw()
 			
 			ability_one.set_throw = true
-	
+			toggle_cast_pointer()
+			
 	# ABILITY TESTING EARLY FASE
 
+func toggle_cast_pointer():
+	$CastPos/SpellPointer.visible = !$CastPos/SpellPointer.visible
