@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://cgantoajwu3k8"]
+
+[ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_dwxjn"]
+[ext_resource type="PackedScene" uid="uid://c037i74n2dg8k" path="res://scenes/components/take_damage_component.tscn" id="1_isvr3"]
+[ext_resource type="Texture2D" uid="uid://d2hnn2ftbpib0" path="res://assets/spells/water/basic_water_shield.png" id="1_uc8ve"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gw8jd"]
+radius = 13.0
+
+[sub_resource type="Animation" id="Animation_lfuil"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2rft7"]
+resource_name = "active"
+length = 0.625013
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bwp3s"]
+_data = {
+"RESET": SubResource("Animation_lfuil"),
+"active": SubResource("Animation_2rft7")
+}
+
+[node name="BasicWaterShield" type="Node2D"]
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_dwxjn")]
+
+[node name="TakeDamageComponent" parent="." node_paths=PackedStringArray("HEALTH_COMPONENT") instance=ExtResource("1_isvr3")]
+HEALTH_COMPONENT = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageComponent"]
+shape = SubResource("CircleShape2D_gw8jd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_uc8ve")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bwp3s")
+}
+autoplay = "active"
