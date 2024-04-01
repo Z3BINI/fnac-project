@@ -330,6 +330,7 @@ _data = {
 
 [node name="BasicFireBall" type="Node2D"]
 script = ExtResource("1_4oj70")
+TRAVEL_SPEED = 200.0
 
 [node name="WallDetectComponent" parent="." instance=ExtResource("8_2s8g2")]
 
