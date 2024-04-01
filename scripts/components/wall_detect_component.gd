@@ -1,7 +1,8 @@
 extends Area2D
 
+signal hit_wall
+
 @onready var parent_node = self.get_parent()
 
 func _on_area_entered(_area):
-	# Any animation for destruction goes here...
-	parent_node.queue_free()
+	hit_wall.emit()
