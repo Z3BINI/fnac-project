@@ -84,7 +84,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [20]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -96,7 +96,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_bibi5")]
+"values": [ExtResource("9_yigkj")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -108,7 +108,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [12]
+"values": [1]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -120,7 +120,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 
 [sub_resource type="Animation" id="Animation_il1s4"]
