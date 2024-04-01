@@ -365,6 +365,9 @@ HEALTH_COMPONENT = NodePath("../HealthComponent")
 position = Vector2(-0.108038, -8.63071)
 shape = SubResource("RectangleShape2D_f3bel")
 
+[node name="CastPos" type="Marker2D" parent="."]
+position = Vector2(-16.7043, 2.11588)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.575733, -1.90368)
 texture = ExtResource("7_bibi5")
