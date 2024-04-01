@@ -18,7 +18,7 @@ func _process(_delta) -> void:
 	if (Input.is_action_just_pressed("dash")): pressed_dash = true  # Toggle dash request
 	
 	controller_aim = Input.get_vector("analog_aim_left", "analog_aim_right", "analog_aim_up", "analog_aim_down")
-	mouse_aim = (get_global_mouse_position() - global_position).normalized()
+	mouse_aim = (get_global_mouse_position() - $CastPos.global_position).normalized()
 	
 
 func _physics_process(_delta) -> void:
