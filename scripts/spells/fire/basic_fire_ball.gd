@@ -26,7 +26,7 @@ func cancel():
 
 func throw(delta):
 	animation_player.play("throw")
-	global_position += dir1 * delta * THROW_SPEED
+	global_position += dir1 * delta * TRAVEL_SPEED	
 
 func pre_throw():
 	rotation_degrees = rotate_towards_vector(dir1)  # Specificly situated here due to sprite in question
