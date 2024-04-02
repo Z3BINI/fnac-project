@@ -344,6 +344,7 @@ position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_ygnjk")
 
 [node name="DoDamageComponent" parent="." instance=ExtResource("1_l4yox")]
+DAMAGE_AMOUNT = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoDamageComponent"]
 position = Vector2(-1, 0)
