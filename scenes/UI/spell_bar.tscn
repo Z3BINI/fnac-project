@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dos7j1y75fgto"]
+
+[ext_resource type="Script" path="res://scripts/UI/spell_bar.gd" id="1_15aab"]
+[ext_resource type="PackedScene" uid="uid://brfthv744weni" path="res://scenes/UI/spell_button.tscn" id="2_pjyep"]
+
+[sub_resource type="Shortcut" id="Shortcut_cklte"]
+
+[sub_resource type="Shortcut" id="Shortcut_onjo8"]
+
+[sub_resource type="Shortcut" id="Shortcut_l7ryq"]
+
+[node name="SpellBar" type="HBoxContainer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -40.0
+offset_right = 86.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_15aab")
+
+[node name="SpellButton" parent="." instance=ExtResource("2_pjyep")]
+layout_mode = 2
+
+[node name="SpellButton2" parent="." instance=ExtResource("2_pjyep")]
+layout_mode = 2
+shortcut = SubResource("Shortcut_cklte")
+
+[node name="SpellButton3" parent="." instance=ExtResource("2_pjyep")]
+layout_mode = 2
+shortcut = SubResource("Shortcut_onjo8")
+
+[node name="SpellButton4" parent="." instance=ExtResource("2_pjyep")]
+layout_mode = 2
+shortcut = SubResource("Shortcut_l7ryq")
