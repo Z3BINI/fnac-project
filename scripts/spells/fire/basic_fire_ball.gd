@@ -33,6 +33,7 @@ func pre_throw():
 	rotation_degrees = rotate_towards_vector(dir1)  # Specificly situated here due to sprite in question
 	animation_player.play("pre_throw")
 	await animation_player.animation_finished
+	set_throw = true
 
 func _on_do_damage_component_did_damage():
 	pass # Replace with function body.
