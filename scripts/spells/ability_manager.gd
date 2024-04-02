@@ -17,6 +17,8 @@ var pressed_action : String = ""
 var water_action : String = ""
 var fire_action : String = ""
 
+var store_water_scale : Vector2 = Vector2.ZERO
+
 func _process(_delta):
 	controller_aim = Input.get_vector("analog_aim_left", "analog_aim_right", "analog_aim_up", "analog_aim_down")
 	mouse_aim = (get_global_mouse_position() - spell_spawn_position.global_position).normalized()
@@ -69,8 +71,23 @@ func _physics_process(delta):
 			fire_spell = null
 
 	if water_action != "":
+		
+		if (store_water_scale != Vector2.ZERO 
+		and water_spell.active == false):  # Get last used shield size
+			water_spell.scale = store_water_scale
+			
+		water_spell.active = true
+		
+		if water_spell.scale <= Vector2.ZERO: 
+			store_water_scale = Vector2.ZERO  # Reset stored size
+			water_spell.cancel()
+			hud.spell_bar.used_spell(water_action)
+			water_action = ""
+			water_spell = null
+		
 		#CANCEL
 		if (Input.is_action_just_released(water_action)):
+			store_water_scale = water_spell.scale  # Store current size
 			water_spell.cancel()
 			water_action = ""
 			water_spell = null
