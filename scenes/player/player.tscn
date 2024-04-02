@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://chr6qhnp1dx20"]
+[gd_scene load_steps=37 format=3 uid="uid://chr6qhnp1dx20"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_5ftyk"]
 [ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_7iw85"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://rnurug74lp3c" path="res://assets/player/SpriteSheets/Player_WalkLeft.png" id="11_ckdkd"]
 [ext_resource type="Texture2D" uid="uid://dix5ec6hvsr7m" path="res://assets/player/SpriteSheets/Player_WalkRight.png" id="12_echfq"]
 [ext_resource type="Texture2D" uid="uid://p4p8g6w2hin0" path="res://assets/player/SpriteSheets/Player_WalkUp.png" id="13_a2s3o"]
+[ext_resource type="Texture2D" uid="uid://c7tlmtfe8ypy3" path="res://assets/player/SpriteSheets/Player_WalkUpLeft.png" id="13_gdcex"]
+[ext_resource type="Texture2D" uid="uid://rj33feg5qlsn" path="res://assets/player/SpriteSheets/Player_WalkUpRight.png" id="13_yrqir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3bel"]
 size = Vector2(22.5949, 54.5549)
@@ -357,7 +359,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [16]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -369,7 +371,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_bibi5")]
+"values": [ExtResource("13_a2s3o")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -381,7 +383,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -393,7 +395,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [12]
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_yywt6"]
@@ -411,7 +413,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [23]
+"values": [3]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -423,7 +425,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_bibi5")]
+"values": [ExtResource("13_gdcex")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -435,7 +437,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -447,7 +449,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [12]
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_acsnm"]
@@ -465,7 +467,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [17]
+"values": [5]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -477,7 +479,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_bibi5")]
+"values": [ExtResource("13_yrqir")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -489,7 +491,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -501,7 +503,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [12]
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_tlajx"]
@@ -830,9 +832,9 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_6on14"]
 resource_name = "walk_top_left"
-length = 0.500013
+length = 0.750008
 loop_mode = 1
-step = 0.125
+step = 0.0833333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -840,10 +842,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [15, 23, 31, 23]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -855,7 +857,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_bibi5")]
+"values": [ExtResource("13_gdcex")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -867,7 +869,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -879,14 +881,14 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [12]
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_dgjg0"]
 resource_name = "walk_top_right"
-length = 0.500013
+length = 0.750008
 loop_mode = 1
-step = 0.125
+step = 0.0833333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -894,10 +896,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [9, 17, 25, 17]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -909,7 +911,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_bibi5")]
+"values": [ExtResource("13_yrqir")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -921,7 +923,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -933,7 +935,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [12]
+"values": [1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0c73b"]
