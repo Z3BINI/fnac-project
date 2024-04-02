@@ -6,6 +6,8 @@ signal check_spell_button_status(invoked_spell, is_on_cd)
 @export var spell_spawn_position : Marker2D
 @onready var PLAYER_BODY : CharacterBody2D = self.get_parent()
 @onready var hud = $"../HUD"
+@onready var player_damage = $"../TakeDamageComponent"
+
 
 var controller_aim : Vector2
 var mouse_aim : Vector2
@@ -71,6 +73,7 @@ func _physics_process(delta):
 			fire_spell = null
 
 	if water_action != "":
+		player_damage.toggle_take_damage_disabled(true)
 		
 		if (store_water_scale != Vector2.ZERO 
 		and water_spell.active == false):  # Get last used shield size
@@ -85,6 +88,7 @@ func _physics_process(delta):
 			water_action = ""
 			water_spell = null
 		
+			
 		#CANCEL
 		if (Input.is_action_just_released(water_action)):
 			store_water_scale = water_spell.scale  # Store current size
@@ -92,7 +96,8 @@ func _physics_process(delta):
 			water_action = ""
 			water_spell = null
 				
-
+	else:
+		player_damage.toggle_take_damage_disabled(false)
 
 func _on_check_spell_button_status(pressed_action, invoked_spell, is_on_cd):
 	if invoked_spell == null:
