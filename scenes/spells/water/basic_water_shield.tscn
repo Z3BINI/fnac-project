@@ -49,13 +49,11 @@ _data = {
 }
 
 [node name="BasicWaterShield" type="Node2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_4kenc")
 SPELL_TYPE = "SELF_INFLICTING"
-CAST_TIME = null
-MANA_COST = null
 COOLDOWN = 3.0
 TEXTURE = ExtResource("2_q2n1c")
-TRAVEL_SPEED = null
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_dwxjn")]
 
@@ -75,3 +73,5 @@ libraries = {
 "": SubResource("AnimationLibrary_bwp3s")
 }
 autoplay = "active"
+
+[connection signal="took_damage" from="HealthComponent" to="." method="_on_health_component_took_damage"]
