@@ -11,7 +11,5 @@ func _process(_delta) -> void:
 	is_pressing_sprint = Input.is_action_pressed("sprint")
 	if (Input.is_action_just_pressed("dash")): pressed_dash = true  # Toggle dash request
 	
-
-
 func _on_health_component_took_damage():
 	print("player took dmg")

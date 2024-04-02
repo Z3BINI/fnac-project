@@ -986,7 +986,6 @@ HEALTH_COMPONENT = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageComponent"]
 position = Vector2(-0.234337, -12.1796)
 shape = SubResource("RectangleShape2D_f3bel")
-disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.575733, -1.90368)
