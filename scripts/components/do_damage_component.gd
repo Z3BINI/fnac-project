@@ -5,8 +5,7 @@ signal did_damage
 
 @export var DAMAGE_AMOUNT : float
 
-func _on_area_entered(area : HealthComponent):
-	area.take_damage(DAMAGE_AMOUNT)
+func _on_area_entered(area):
 	did_damage.emit()
 
 func toggle_detection_disabled(state : bool):
