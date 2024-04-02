@@ -330,6 +330,7 @@ _data = {
 }
 
 [node name="BasicFireBall" type="Node2D"]
+modulate = Color(1.5, 1.5, 1.5, 1)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_4oj70")
 SPELL_TYPE = "THROWABLE"
