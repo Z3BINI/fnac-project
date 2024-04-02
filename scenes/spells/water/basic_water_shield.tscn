@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgantoajwu3k8"]
+[gd_scene load_steps=10 format=3 uid="uid://cgantoajwu3k8"]
 
 [ext_resource type="Script" path="res://scripts/spells/water/basic_water_shield.gd" id="1_4kenc"]
 [ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_dwxjn"]
 [ext_resource type="PackedScene" uid="uid://c037i74n2dg8k" path="res://scenes/components/take_damage_component.tscn" id="1_isvr3"]
 [ext_resource type="Texture2D" uid="uid://d2hnn2ftbpib0" path="res://assets/spells/water/basic_water_shield.png" id="1_uc8ve"]
+[ext_resource type="Texture2D" uid="uid://dojbo4o8feh4w" path="res://icon.svg" id="2_q2n1c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw8jd"]
 radius = 13.0
@@ -50,6 +51,8 @@ _data = {
 [node name="BasicWaterShield" type="Node2D"]
 script = ExtResource("1_4kenc")
 SPELL_TYPE = "SELF_INFLICTING"
+COOLDOWN = 3.0
+TEXTURE = ExtResource("2_q2n1c")
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_dwxjn")]
 

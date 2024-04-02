@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dgffsdhgr7eag"]
+[gd_scene load_steps=18 format=3 uid="uid://dgffsdhgr7eag"]
 
 [ext_resource type="Script" path="res://scripts/spells/fire/basic_fire_ball.gd" id="1_4oj70"]
 [ext_resource type="PackedScene" uid="uid://0gaonji06kpd" path="res://scenes/components/do_damage_component.tscn" id="1_l4yox"]
 [ext_resource type="Texture2D" uid="uid://d8tnqvi6psps" path="res://assets/spells/fire/basic_fire_ball/IdleLoop-Sheet.png" id="1_o41qo"]
+[ext_resource type="Texture2D" uid="uid://dojbo4o8feh4w" path="res://icon.svg" id="2_adwu8"]
 [ext_resource type="Texture2D" uid="uid://cvccatvv3s513" path="res://assets/spells/fire/basic_fire_ball/Creation-Sheet.png" id="4_r76i3"]
 [ext_resource type="Texture2D" uid="uid://coschh2si7juy" path="res://assets/spells/fire/basic_fire_ball/ShootAntecipation-Sheet.png" id="5_otb6m"]
 [ext_resource type="Texture2D" uid="uid://o16qbjbn47ai" path="res://assets/spells/fire/basic_fire_ball/ShotLoop-Sheet.png" id="6_5haf7"]
@@ -331,6 +332,8 @@ _data = {
 [node name="BasicFireBall" type="Node2D"]
 script = ExtResource("1_4oj70")
 SPELL_TYPE = "THROWABLE"
+COOLDOWN = 1.0
+TEXTURE = ExtResource("2_adwu8")
 TRAVEL_SPEED = 200.0
 
 [node name="WallDetectComponent" parent="." instance=ExtResource("8_2s8g2")]
