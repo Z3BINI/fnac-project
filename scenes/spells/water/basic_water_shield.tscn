@@ -49,6 +49,7 @@ _data = {
 }
 
 [node name="BasicWaterShield" type="Node2D"]
+modulate = Color(0.663, 2, 2, 1)
 scale = Vector2(2, 2)
 script = ExtResource("1_4kenc")
 SPELL_TYPE = "SELF_INFLICTING"
