@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rbb8pw2fuduy"]
+[gd_scene load_steps=3 format=3 uid="uid://rbb8pw2fuduy"]
 
 [ext_resource type="Script" path="res://scripts/UI/hud.gd" id="1_0s0iu"]
+[ext_resource type="PackedScene" uid="uid://dos7j1y75fgto" path="res://scenes/UI/spell_bar.tscn" id="2_xbtl6"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_0s0iu")
@@ -11,9 +12,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0
-offset_top = -8.0
+offset_top = -167.0
 offset_right = 81.0
-offset_bottom = -2.0
+offset_bottom = -161.0
 grow_vertical = 0
 show_percentage = false
 
@@ -23,8 +24,10 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0
-offset_top = -13.0
+offset_top = -159.0
 offset_right = 47.0
-offset_bottom = -9.0
+offset_bottom = -155.0
 grow_vertical = 0
 show_percentage = false
+
+[node name="SpellBar" parent="." instance=ExtResource("2_xbtl6")]
