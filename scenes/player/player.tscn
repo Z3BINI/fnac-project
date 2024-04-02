@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_5ftyk"]
 [ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_7iw85"]
 [ext_resource type="PackedScene" uid="uid://csf05tt775xif" path="res://scenes/components/velocity_component.tscn" id="2_ahoae"]
-[ext_resource type="PackedScene" path="res://scenes/spells/ability_manager.tscn" id="2_do7ep"]
+[ext_resource type="PackedScene" uid="uid://dqu2c7ohtmcyx" path="res://scenes/spells/ability_manager.tscn" id="2_do7ep"]
 [ext_resource type="PackedScene" uid="uid://rbb8pw2fuduy" path="res://scenes/UI/hud.tscn" id="2_fyutm"]
 [ext_resource type="PackedScene" uid="uid://c72go2r46fgfw" path="res://scenes/components/stamina_component.tscn" id="2_gsf2b"]
 [ext_resource type="PackedScene" uid="uid://c037i74n2dg8k" path="res://scenes/components/take_damage_component.tscn" id="2_mc55h"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dix5ec6hvsr7m" path="res://assets/player/SpriteSheets/Player_WalkRight.png" id="12_echfq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3bel"]
-size = Vector2(11.9324, 16.6953)
+size = Vector2(22.5949, 54.5549)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sjgpt"]
 size = Vector2(7.53886, 2.01809)
@@ -983,8 +983,9 @@ position = Vector2(0.112217, 8.63282)
 HEALTH_COMPONENT = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageComponent"]
-position = Vector2(-0.108038, -8.63071)
+position = Vector2(-0.234337, -12.1796)
 shape = SubResource("RectangleShape2D_f3bel")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.575733, -1.90368)
@@ -1012,3 +1013,4 @@ libraries = {
 }
 
 [connection signal="check_spell_button_status" from="AbilityManager" to="AbilityManager" method="_on_check_spell_button_status"]
+[connection signal="took_damage" from="HealthComponent" to="." method="_on_health_component_took_damage"]

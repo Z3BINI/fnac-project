@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5bfm2ntd8pao"]
+[gd_scene load_steps=3 format=3 uid="uid://c5bfm2ntd8pao"]
 
 [ext_resource type="PackedScene" uid="uid://chr6qhnp1dx20" path="res://scenes/player/player.tscn" id="1_5alqc"]
+[ext_resource type="PackedScene" uid="uid://bjdlwk3p14b8c" path="res://scenes/test_dmg_doer.tscn" id="2_52vcj"]
 
 [node name="TestWorld" type="Node2D"]
 
@@ -8,3 +9,6 @@
 
 [node name="Player" parent="." instance=ExtResource("1_5alqc")]
 position = Vector2(119, 73)
+
+[node name="TestDmgDoer" parent="." instance=ExtResource("2_52vcj")]
+position = Vector2(222.754, 106.658)
