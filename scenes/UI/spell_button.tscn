@@ -1,17 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://brfthv744weni"]
+[gd_scene load_steps=3 format=3 uid="uid://brfthv744weni"]
 
 [ext_resource type="Texture2D" uid="uid://b52ycyp4j8hk5" path="res://white.png" id="2_tplxg"]
 [ext_resource type="Script" path="res://scripts/UI/spell_button.gd" id="2_xprad"]
 
-[sub_resource type="InputEventKey" id="InputEventKey_3u7lf"]
-
-[sub_resource type="Shortcut" id="Shortcut_c876h"]
-events = [SubResource("InputEventKey_3u7lf")]
-
 [node name="SpellButton" type="TextureButton"]
+custom_minimum_size = Vector2(40, 0)
 offset_right = 40.0
 offset_bottom = 40.0
-shortcut = SubResource("Shortcut_c876h")
+toggle_mode = true
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_xprad")
@@ -62,5 +58,4 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
