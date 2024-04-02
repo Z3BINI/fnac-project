@@ -5,10 +5,14 @@ class_name Spell
 
 @export var CAST_TIME : float
 @export var MANA_COST : float
+@export var COOLDOWN : float
+@export var TEXTURE : Texture2D
 @export var TRAVEL_SPEED : float
 
-var set_throw : bool = false
+var player : CharacterBody2D
+
 var ready_to_throw : bool = false
+var set_throw : bool = false
 
 func channel():
 	pass
