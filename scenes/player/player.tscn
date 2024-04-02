@@ -978,11 +978,6 @@ ACCELERATION = 25.0
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_7iw85")]
 
-[node name="CastPos" type="Marker2D" parent="."]
-position = Vector2(-16.7043, 2.11588)
-
-[node name="SpellPointer" parent="CastPos" instance=ExtResource("7_qxcbc")]
-
 [node name="TakeDamageComponent" parent="." node_paths=PackedStringArray("HEALTH_COMPONENT") instance=ExtResource("2_mc55h")]
 position = Vector2(0.112217, 8.63282)
 HEALTH_COMPONENT = NodePath("../HealthComponent")
@@ -996,6 +991,11 @@ position = Vector2(0.575733, -1.90368)
 texture = ExtResource("9_yigkj")
 hframes = 9
 frame = 8
+
+[node name="CastPos" type="Marker2D" parent="."]
+position = Vector2(-24.0542, 8.35217)
+
+[node name="SpellPointer" parent="CastPos" instance=ExtResource("7_qxcbc")]
 
 [node name="PhysicsCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0.192501, 7.51609)
