@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_dwxjn"]
 [ext_resource type="PackedScene" uid="uid://c037i74n2dg8k" path="res://scenes/components/take_damage_component.tscn" id="1_isvr3"]
 [ext_resource type="Texture2D" uid="uid://d2hnn2ftbpib0" path="res://assets/spells/water/basic_water_shield.png" id="1_uc8ve"]
-[ext_resource type="Texture2D" uid="uid://dojbo4o8feh4w" path="res://icon.svg" id="2_q2n1c"]
+[ext_resource type="Texture2D" uid="uid://u2jgc3sj43tn" path="res://assets/spells/water/water_texture.png" id="2_mhhep"]
 [ext_resource type="Texture2D" uid="uid://bkcdy2o4oca1x" path="res://assets/light_texture.webp" id="6_0f2e7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw8jd"]
@@ -54,7 +54,7 @@ scale = Vector2(2, 2)
 script = ExtResource("1_4kenc")
 SPELL_TYPE = "SELF_INFLICTING"
 COOLDOWN = 3.0
-TEXTURE = ExtResource("2_q2n1c")
+TEXTURE = ExtResource("2_mhhep")
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_dwxjn")]
 
