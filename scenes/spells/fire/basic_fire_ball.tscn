@@ -330,7 +330,7 @@ _data = {
 "throw": SubResource("Animation_0yram")
 }
 
-[node name="BasicFireBall" type="Node2D"]
+[node name="BasicFireBall" type="Node2D" groups=["player_ability"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_4oj70")
 SPELL_TYPE = "THROWABLE"

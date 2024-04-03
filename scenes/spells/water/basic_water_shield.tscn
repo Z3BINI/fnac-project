@@ -49,7 +49,7 @@ _data = {
 "active": SubResource("Animation_2rft7")
 }
 
-[node name="BasicWaterShield" type="Node2D"]
+[node name="BasicWaterShield" type="Node2D" groups=["player_ability"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_4kenc")
 SPELL_TYPE = "SELF_INFLICTING"
