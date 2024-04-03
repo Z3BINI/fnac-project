@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://o16qbjbn47ai" path="res://assets/spells/fire/basic_fire_ball/ShotLoop-Sheet.png" id="6_5haf7"]
 [ext_resource type="Texture2D" uid="uid://bj3tirjcrqtdd" path="res://assets/spells/fire/basic_fire_ball/Explode-Sheet.png" id="7_3embl"]
 [ext_resource type="PackedScene" uid="uid://fd267k2k17p3" path="res://scenes/components/wall_detect_component.tscn" id="8_2s8g2"]
-[ext_resource type="Texture2D" uid="uid://b52ycyp4j8hk5" path="res://white.png" id="10_gbknm"]
+[ext_resource type="Texture2D" uid="uid://bkcdy2o4oca1x" path="res://assets/light_texture.webp" id="10_j12yr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ygnjk"]
 radius = 5.09902
@@ -363,11 +363,10 @@ libraries = {
 }
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(0.225584, 0.22076)
 color = Color(1, 0.427451, 0.356863, 1)
-energy = 0.5
 shadow_enabled = true
-texture = ExtResource("10_gbknm")
+texture = ExtResource("10_j12yr")
+texture_scale = 0.25
 
 [connection signal="hit_wall" from="WallDetectComponent" to="." method="_on_wall_detect_component_hit_wall"]
 [connection signal="did_damage" from="DoDamageComponent" to="." method="_on_do_damage_component_did_damage"]
