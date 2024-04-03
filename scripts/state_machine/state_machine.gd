@@ -25,7 +25,7 @@ func _physics_process(delta):
 	if current_state:  # Load current_state's phyisics_update()
 		current_state.physics_update(delta)
 
-func on_state_transition(calling_state : State, new_state_name : String):
+func on_state_transition(calling_state : State, new_state_name : String, player_body : Player):
 	if calling_state != current_state:
 		return
 	
@@ -36,7 +36,8 @@ func on_state_transition(calling_state : State, new_state_name : String):
 	if current_state:
 		current_state.exit_state()
 	
-	new_state.enter_state()
+	if player_body: new_state.enter_state(player_body)
+	else: new_state.enter_state()
 	
 	current_state = new_state
 
