@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://chr6qhnp1dx20" path="res://scenes/player/player.tscn" id="1_5alqc"]
 [ext_resource type="Texture2D" uid="uid://8xoxpumbya6s" path="res://assets/tilesets/Floor_1.png" id="1_guhcg"]
-[ext_resource type="PackedScene" uid="uid://bjdlwk3p14b8c" path="res://scenes/test_dmg_doer.tscn" id="2_52vcj"]
+[ext_resource type="PackedScene" uid="uid://02s5kpq073pc" path="res://scenes/enemies/enemy_skeleton_white.tscn" id="4_ipxwg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1uwuc"]
 texture = ExtResource("1_guhcg")
@@ -94,5 +94,5 @@ environment = SubResource("Environment_q0adt")
 [node name="Player" parent="." instance=ExtResource("1_5alqc")]
 position = Vector2(119, 73)
 
-[node name="TestDmgDoer" parent="." instance=ExtResource("2_52vcj")]
-position = Vector2(222.754, 106.658)
+[node name="EnemySkeletonWhite" parent="." instance=ExtResource("4_ipxwg")]
+position = Vector2(576.3, 185.676)
