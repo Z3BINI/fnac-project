@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brfthv744weni"]
 
-[ext_resource type="Texture2D" uid="uid://b52ycyp4j8hk5" path="res://white.png" id="2_tplxg"]
+[ext_resource type="Texture2D" uid="uid://b52ycyp4j8hk5" path="res://assets/white.png" id="2_tplxg"]
 [ext_resource type="Script" path="res://scripts/UI/spell_button.gd" id="2_xprad"]
 
 [node name="SpellButton" type="TextureButton"]
