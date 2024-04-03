@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cgantoajwu3k8"]
+[gd_scene load_steps=11 format=3 uid="uid://cgantoajwu3k8"]
 
 [ext_resource type="Script" path="res://scripts/spells/water/basic_water_shield.gd" id="1_4kenc"]
 [ext_resource type="PackedScene" uid="uid://cg511nsjeefow" path="res://scenes/components/health_component.tscn" id="1_dwxjn"]
 [ext_resource type="PackedScene" uid="uid://c037i74n2dg8k" path="res://scenes/components/take_damage_component.tscn" id="1_isvr3"]
 [ext_resource type="Texture2D" uid="uid://d2hnn2ftbpib0" path="res://assets/spells/water/basic_water_shield.png" id="1_uc8ve"]
 [ext_resource type="Texture2D" uid="uid://dojbo4o8feh4w" path="res://icon.svg" id="2_q2n1c"]
+[ext_resource type="Texture2D" uid="uid://b52ycyp4j8hk5" path="res://white.png" id="6_t8lao"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw8jd"]
 radius = 13.0
@@ -49,7 +50,6 @@ _data = {
 }
 
 [node name="BasicWaterShield" type="Node2D"]
-modulate = Color(0.663, 2, 2, 1)
 scale = Vector2(2, 2)
 script = ExtResource("1_4kenc")
 SPELL_TYPE = "SELF_INFLICTING"
@@ -74,5 +74,10 @@ libraries = {
 "": SubResource("AnimationLibrary_bwp3s")
 }
 autoplay = "active"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0, 0.929412, 0.929412, 1)
+shadow_enabled = true
+texture = ExtResource("6_t8lao")
 
 [connection signal="took_damage" from="HealthComponent" to="." method="_on_health_component_took_damage"]

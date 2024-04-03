@@ -21,6 +21,7 @@ func channel():
 	animation_player.play("idle")
 	
 func cancel():
+	$PointLight2D.enabled = false
 	animation_player.play("impact")
 	await animation_player.animation_finished
 	queue_free()
