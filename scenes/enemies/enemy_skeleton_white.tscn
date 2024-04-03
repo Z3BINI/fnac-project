@@ -630,6 +630,12 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
 shape = SubResource("CircleShape2D_qqtj0")
 
+[node name="TemporaryHP" type="ProgressBar" parent="."]
+offset_left = -37.3333
+offset_top = -58.0
+offset_right = 36.6667
+offset_bottom = -31.0
+
 [connection signal="body_entered" from="PlayerDetection" to="StateMachine/Idle" method="_on_player_detection_body_entered"]
 [connection signal="body_entered" from="PlayerDetection" to="StateMachine/Roam" method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="StateMachine/Hostile" method="_on_player_detection_body_exited"]

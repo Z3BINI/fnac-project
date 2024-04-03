@@ -6,7 +6,8 @@ var current_accel : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	# TEMPORARY HP UI LOGIC
+	$TemporaryHP.max_value = $HealthComponent.MAX_HP
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,6 +18,10 @@ func _process(_delta):
 	# Temporary logic for flipping damage box with this sprite
 	if ($Sprite2D.flip_h): $DoDamageComponent.rotation_degrees = 180
 	else: $DoDamageComponent.rotation_degrees = 0
+	
+	
+	# TEMPORARY HP UI LOGIC
+	$TemporaryHP.value = $HealthComponent.current_hp
 
 func _physics_process(_delta):
 	velocity = velocity.move_toward(current_direction * current_speed, current_accel)
