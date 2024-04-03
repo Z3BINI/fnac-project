@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dgffsdhgr7eag"]
+[gd_scene load_steps=19 format=3 uid="uid://dgffsdhgr7eag"]
 
 [ext_resource type="Script" path="res://scripts/spells/fire/basic_fire_ball.gd" id="1_4oj70"]
 [ext_resource type="PackedScene" uid="uid://0gaonji06kpd" path="res://scenes/components/do_damage_component.tscn" id="1_l4yox"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://o16qbjbn47ai" path="res://assets/spells/fire/basic_fire_ball/ShotLoop-Sheet.png" id="6_5haf7"]
 [ext_resource type="Texture2D" uid="uid://bj3tirjcrqtdd" path="res://assets/spells/fire/basic_fire_ball/Explode-Sheet.png" id="7_3embl"]
 [ext_resource type="PackedScene" uid="uid://fd267k2k17p3" path="res://scenes/components/wall_detect_component.tscn" id="8_2s8g2"]
+[ext_resource type="Texture2D" uid="uid://bkcdy2o4oca1x" path="res://assets/light_texture.webp" id="10_3vcrj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ygnjk"]
 radius = 5.09902
@@ -329,8 +330,7 @@ _data = {
 "throw": SubResource("Animation_0yram")
 }
 
-[node name="BasicFireBall" type="Node2D"]
-modulate = Color(1.5, 1.5, 1.5, 1)
+[node name="BasicFireBall" type="Node2D" groups=["player_ability"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_4oj70")
 SPELL_TYPE = "THROWABLE"
@@ -361,6 +361,12 @@ hframes = 4
 libraries = {
 "": SubResource("AnimationLibrary_73s4c")
 }
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.427451, 0.356863, 1)
+shadow_enabled = true
+texture = ExtResource("10_3vcrj")
+texture_scale = 0.25
 
 [connection signal="hit_wall" from="WallDetectComponent" to="." method="_on_wall_detect_component_hit_wall"]
 [connection signal="did_damage" from="DoDamageComponent" to="." method="_on_do_damage_component_did_damage"]

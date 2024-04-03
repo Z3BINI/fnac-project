@@ -21,6 +21,7 @@ func channel():
 	animation_player.play("idle")
 	
 func cancel():
+	$PointLight2D.enabled = false
 	animation_player.play("impact")
 	await animation_player.animation_finished
 	queue_free()
@@ -33,12 +34,15 @@ func pre_throw():
 	rotation_degrees = rotate_towards_vector(dir1)  # Specificly situated here due to sprite in question
 	animation_player.play("pre_throw")
 	await animation_player.animation_finished
+	set_throw = true
 
 func _on_do_damage_component_did_damage():
-	pass # Replace with function body.
+	set_throw = false
+	cancel()
 
 func _on_wall_detect_component_hit_wall():
-	pass # Replace with function body.
+	set_throw = false
+	cancel()
 
 func rotate_towards_vector(normalized_direction: Vector2):
 	# Calculate the angle between the normalized direction and the positive x-axis

@@ -39,38 +39,38 @@ func _physics_process(delta):
 	
 	
 	
-	if (fire_action != ""): 
-		 
+	if fire_action != "":
+		
 		#CANCEL
-		if (Input.is_action_just_released(fire_action) and 
+		if (Input.is_action_just_released(fire_action) and
+		fire_action != null and 
 		fire_spell.set_throw == false):
-				
-				hud.toggle_aim_pointer(false)
-				fire_spell.cancel()
-				
-				fire_action = ""
-				fire_spell = null
+			
+			hud.toggle_aim_pointer(false)
+			fire_spell.cancel()
+			
+			fire_action = ""
+			fire_spell = null
 		
 		#THROW
 		if (Input.is_action_just_pressed("throw_cast") and
-		!fire_spell.set_throw and 
-		fire_spell.ready_to_throw): 
+		spell_spawn_position.get_child_count() != 0): 
 			
 			var store_action = fire_action  # Prevent click spam crash
 			fire_action = ""
 			
-			fire_spell.reparent(get_tree().get_first_node_in_group("projectiles"))
-			fire_spell.dir1 = mouse_aim       # Controller and mouse aim
-			fire_spell.dir2 = controller_aim  # Seperated TESTING
-		
-			await fire_spell.pre_throw()
-		
-			fire_spell.set_throw = true
-			hud.spell_bar.used_spell(store_action)
+			if fire_spell != null:
+				fire_spell.reparent(get_tree().get_first_node_in_group("projectiles"))
+				fire_spell.dir1 = mouse_aim       # Controller and mouse aim
+				fire_spell.dir2 = controller_aim  # Seperated TESTING
 			
-			hud.toggle_aim_pointer(false)
+				fire_spell.pre_throw()
 			
-			fire_spell = null
+				hud.spell_bar.used_spell(store_action)
+				
+				hud.toggle_aim_pointer(false)
+				
+				fire_spell = null
 
 	if water_action != "":
 		player_damage.toggle_take_damage_disabled(true)

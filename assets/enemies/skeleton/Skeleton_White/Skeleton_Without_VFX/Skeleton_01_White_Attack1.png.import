@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b52ycyp4j8hk5"
-path="res://.godot/imported/white.png-d8533361663a5f8fe5200e5b5262a62d.ctex"
+uid="uid://bems8srkynwn2"
+path="res://.godot/imported/Skeleton_01_White_Attack1.png-c7f32ff07c1327f698472072b17fcdde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://white.png"
-dest_files=["res://.godot/imported/white.png-d8533361663a5f8fe5200e5b5262a62d.ctex"]
+source_file="res://assets/enemies/skeleton/Skeleton_White/Skeleton_Without_VFX/Skeleton_01_White_Attack1.png"
+dest_files=["res://.godot/imported/Skeleton_01_White_Attack1.png-c7f32ff07c1327f698472072b17fcdde.ctex"]
 
 [params]
 
